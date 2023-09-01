@@ -1,0 +1,17 @@
+Package: StrippedGraphicalVAR
+Type: Package
+Title: Stripped Graphical VAR for Experience Sampling Data
+Version: 0.3.1
+Authors@R: c(
+  person("Sacha", "Epskamp", email = "mail@sachaepskamp.com",role = c("aut", "cre")),
+  person("Eren", "Asena", role = c("ctb"))
+  )
+Maintainer: Kristof Meers <kristof.meers@kuleuven.be>
+Description: Estimates within and between time point interactions in experience sampling data, using the Graphical vector autoregression model in combination with regularization. See also Epskamp, Waldorp, Mottus & Borsboom (2018) <doi:10.1080/00273171.2018.1454823>.
+License: GPL (>= 2)
+LinkingTo: Rcpp, RcppArmadillo
+Imports: Rcpp (>= 0.11.3), Matrix, methods, rlang
+Depends: R (>= 3.1.0)
+NeedsCompilation: yes
+Author: Sacha Epskamp [aut, cre],
+  Eren Asena [ctb]
