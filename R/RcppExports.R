@@ -9,14 +9,6 @@ Beta_C <- function(kappa, beta, X, Y, lambda_beta, lambda_beta_mat, convergence,
     .Call(`_StrippedGraphicalVAR_Beta_C`, kappa, beta, X, Y, lambda_beta, lambda_beta_mat, convergence, maxit)
 }
 
-VAR_logLik_C <- function(X, Y, kappa, beta) {
-    .Call(`_StrippedGraphicalVAR_VAR_logLik_C`, X, Y, kappa, beta)
-}
-
-LogLik_and_BIC <- function(X, Y, estimates) {
-    .Call(`_StrippedGraphicalVAR_LogLik_and_BIC`, X, Y, estimates)
-}
-
 inner_loop <- function(S, W, X, WXj, Wd, n, rho, thrLasso) {
     .Call(`_StrippedGraphicalVAR_inner_loop`, S, W, X, WXj, Wd, n, rho, thrLasso)
 }

@@ -63,7 +63,6 @@ NumericMatrix beta_ridge_C(NumericMatrix X, NumericMatrix Y, double lambda_beta)
   return(Rcpp::as<Rcpp::NumericMatrix>(wrap(beta_ridge_)));
 }
 
-
 // Compute Beta given Kappa:
 // [[Rcpp::export]]
 NumericMatrix Beta_C(NumericMatrix kappa, NumericMatrix beta, NumericMatrix X, NumericMatrix Y, 
@@ -129,8 +128,7 @@ double lambda_beta, NumericMatrix lambda_beta_mat, double convergence, int maxit
   return(beta_new);
 }
 
-
-
+/*
 // [[Rcpp::export]]
 double VAR_logLik_C(NumericMatrix X, NumericMatrix Y, NumericMatrix kappa, NumericMatrix beta){
   // http://webspace.qmul.ac.uk/aferreira/lect2-var2_handout.pdf
@@ -156,7 +154,8 @@ double VAR_logLik_C(NumericMatrix X, NumericMatrix Y, NumericMatrix kappa, Numer
   
   return(res);
 }
-
+*/
+/*
 // [[Rcpp::export]]
 List LogLik_and_BIC(NumericMatrix X, NumericMatrix Y, List estimates){
 
@@ -202,7 +201,7 @@ List LogLik_and_BIC(NumericMatrix X, NumericMatrix Y, List estimates){
   
   return(Results);
 }
-
+*/
 
 
 /*

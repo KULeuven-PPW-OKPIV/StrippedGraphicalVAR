@@ -5,10 +5,11 @@ export(graphicalVAR)
 export(graphicalVARsim)
 importFrom(rlang, .data)
 importFrom(Rcpp, evalCpp)
-importFrom(Matrix, forceSymmetric)
 export(randomGVARmodel)
 #export(VARglm)
 #importFrom(sn, rmsn)
+
+import(dplyr)
 
 importFrom("graphics", "layout", "par", "text")
 importFrom("methods", "is")

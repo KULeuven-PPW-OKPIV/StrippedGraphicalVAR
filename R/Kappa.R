@@ -10,5 +10,5 @@ function(beta, X, Y, lambda_kappa,regularize_mat_kappa){
     stop("Residual covariance matrix is not non-negative definite")
   }
   res <- glasso(SigmaR, regularize_mat_kappa * lambda_kappa)
-  return(as.matrix(forceSymmetric(res$wi)))
+  return(as.matrix(res$wi))
 }

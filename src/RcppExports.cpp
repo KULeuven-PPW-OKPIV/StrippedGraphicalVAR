@@ -42,33 +42,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// VAR_logLik_C
-double VAR_logLik_C(NumericMatrix X, NumericMatrix Y, NumericMatrix kappa, NumericMatrix beta);
-RcppExport SEXP _StrippedGraphicalVAR_VAR_logLik_C(SEXP XSEXP, SEXP YSEXP, SEXP kappaSEXP, SEXP betaSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericMatrix >::type X(XSEXP);
-    Rcpp::traits::input_parameter< NumericMatrix >::type Y(YSEXP);
-    Rcpp::traits::input_parameter< NumericMatrix >::type kappa(kappaSEXP);
-    Rcpp::traits::input_parameter< NumericMatrix >::type beta(betaSEXP);
-    rcpp_result_gen = Rcpp::wrap(VAR_logLik_C(X, Y, kappa, beta));
-    return rcpp_result_gen;
-END_RCPP
-}
-// LogLik_and_BIC
-List LogLik_and_BIC(NumericMatrix X, NumericMatrix Y, List estimates);
-RcppExport SEXP _StrippedGraphicalVAR_LogLik_and_BIC(SEXP XSEXP, SEXP YSEXP, SEXP estimatesSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericMatrix >::type X(XSEXP);
-    Rcpp::traits::input_parameter< NumericMatrix >::type Y(YSEXP);
-    Rcpp::traits::input_parameter< List >::type estimates(estimatesSEXP);
-    rcpp_result_gen = Rcpp::wrap(LogLik_and_BIC(X, Y, estimates));
-    return rcpp_result_gen;
-END_RCPP
-}
 // inner_loop
 double inner_loop(const NumericMatrix& S, NumericMatrix& W, NumericMatrix& X, NumericVector& WXj, const NumericVector& Wd, int n, NumericMatrix& rho, double thrLasso);
 RcppExport SEXP _StrippedGraphicalVAR_inner_loop(SEXP SSEXP, SEXP WSEXP, SEXP XSEXP, SEXP WXjSEXP, SEXP WdSEXP, SEXP nSEXP, SEXP rhoSEXP, SEXP thrLassoSEXP) {
@@ -91,8 +64,6 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_StrippedGraphicalVAR_beta_ridge_C", (DL_FUNC) &_StrippedGraphicalVAR_beta_ridge_C, 3},
     {"_StrippedGraphicalVAR_Beta_C", (DL_FUNC) &_StrippedGraphicalVAR_Beta_C, 8},
-    {"_StrippedGraphicalVAR_VAR_logLik_C", (DL_FUNC) &_StrippedGraphicalVAR_VAR_logLik_C, 4},
-    {"_StrippedGraphicalVAR_LogLik_and_BIC", (DL_FUNC) &_StrippedGraphicalVAR_LogLik_and_BIC, 3},
     {"_StrippedGraphicalVAR_inner_loop", (DL_FUNC) &_StrippedGraphicalVAR_inner_loop, 8},
     {NULL, NULL, 0}
 };
